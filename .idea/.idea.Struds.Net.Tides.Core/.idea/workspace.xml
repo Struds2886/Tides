@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4176c3e-107e-42cb-8ecb-69948930ac76" name="Changes" comment="Added Rider files">
-      <change beforePath="$PROJECT_DIR$/Struds.Net.Tides.Core/Struds.Net.Tides.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Struds.Net.Tides.Core/Struds.Net.Tides.Core.csproj" afterDir="false" />
+    <list default="true" id="e4176c3e-107e-42cb-8ecb-69948930ac76" name="Changes" comment="Added project reference">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Struds.Net.Tides.Core/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Struds.Net.Tides.Core/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Struds.Net.Tides.Core.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Struds.Net.Tides.Core.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +39,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "develop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
@@ -50,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730896062010</updated>
-      <workItem from="1730896063166" duration="117000" />
+      <workItem from="1730896063166" duration="366000" />
     </task>
     <task id="LOCAL-00001" summary="Added Rider files">
       <option name="closed" value="true" />
@@ -60,7 +70,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730896132331</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added project reference">
+      <option name="closed" value="true" />
+      <created>1730896306482</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730896306482</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,6 +100,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Added Rider files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Rider files" />
+    <MESSAGE value="Added project reference" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added project reference" />
   </component>
 </project>

@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Struds.Net.TidePredictor.Do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Struds.Net.TidePredictor.Api.Tides", "Struds.Net.TidePredictor.Api.Tides\Struds.Net.TidePredictor.Api.Tides.csproj", "{094FB3D3-1B82-4097-A98B-A3375B661332}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3072B278-AE1E-4E5F-8434-911501AC97BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Struds.Net.TidePredictor.Apiu.Tides.Tests", "Struds.Net.TidePredictor.Apiu.Tides.Tests\Struds.Net.TidePredictor.Apiu.Tides.Tests.csproj", "{78A6E3B6-0C3B-4786-A7C8-0DB2C457971C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,12 @@ Global
 		{094FB3D3-1B82-4097-A98B-A3375B661332}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{094FB3D3-1B82-4097-A98B-A3375B661332}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{094FB3D3-1B82-4097-A98B-A3375B661332}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78A6E3B6-0C3B-4786-A7C8-0DB2C457971C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78A6E3B6-0C3B-4786-A7C8-0DB2C457971C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78A6E3B6-0C3B-4786-A7C8-0DB2C457971C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78A6E3B6-0C3B-4786-A7C8-0DB2C457971C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{78A6E3B6-0C3B-4786-A7C8-0DB2C457971C} = {3072B278-AE1E-4E5F-8434-911501AC97BF}
 	EndGlobalSection
 EndGlobal
