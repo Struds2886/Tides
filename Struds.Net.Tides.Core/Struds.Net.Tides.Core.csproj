@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Struds.Net.TidePredictor.Api.Tides\Struds.Net.TidePredictor.Api.Tides.csproj" />
+    </ItemGroup>
+
 </Project>
