@@ -1,4 +1,4 @@
-namespace Struds.Net.TidePredictor.Apiu.Tides.Tests;
+namespace Struds.Net.TidePredictor.Api.Tides.Tests;
 
 [TestClass]
 public class UnitTest1

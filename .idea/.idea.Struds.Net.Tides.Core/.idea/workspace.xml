@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4176c3e-107e-42cb-8ecb-69948930ac76" name="Changes" comment="Added project reference">
+    <list default="true" id="e4176c3e-107e-42cb-8ecb-69948930ac76" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Struds.Net.Tides.Core/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Struds.Net.Tides.Core/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Struds.Net.Tides.Core.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Struds.Net.Tides.Core.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,23 +15,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Struds2886"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Struds2886&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Struds2886/Tides.git",
-    "accountId": "cf879227-6f9c-444a-aef2-b832ed8f6551"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Struds2886/Tides.git&quot;,
+    &quot;accountId&quot;: &quot;cf879227-6f9c-444a-aef2-b832ed8f6551&quot;
   }
-}]]></component>
+}</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2oTaXnPrdblg0VPg09sdDRN4YmQ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -60,7 +63,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730896062010</updated>
-      <workItem from="1730896063166" duration="366000" />
+      <workItem from="1730896063166" duration="490000" />
+      <workItem from="1730896597277" duration="38000" />
     </task>
     <task id="LOCAL-00001" summary="Added Rider files">
       <option name="closed" value="true" />
@@ -78,7 +82,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730896306482</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added test project">
+      <option name="closed" value="true" />
+      <created>1730896463863</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730896463863</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,9 +110,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Added Rider files" />
     <MESSAGE value="Added project reference" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added project reference" />
+    <MESSAGE value="Added test project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added test project" />
   </component>
 </project>
