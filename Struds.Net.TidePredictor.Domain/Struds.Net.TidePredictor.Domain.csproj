@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Authors>Mark Strudwick</Authors>
+    <Company>Struds.Net Ltd</Company>
+    <Copyright>Struds.Net Ltd 2020</Copyright>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Media\arrow-collapse-down-24.png" />
+    <None Remove="Media\arrow-collapse-down-36.png" />
+    <None Remove="Media\arrow-collapse-down-48.png" />
+    <None Remove="Media\arrow-collapse-up-24.png" />
+    <None Remove="Media\arrow-collapse-up-36.png" />
+    <None Remove="Media\arrow-collapse-up-48.png" />
+    <None Remove="Media\sine-wave-24.png" />
+    <None Remove="Media\sine-wave-36.png" />
+    <None Remove="Media\sine-wave-48.png" />
+    <None Remove="Media\waves-24.png" />
+    <None Remove="Media\waves-36.png" />
+    <None Remove="Media\waves-48.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Media\arrow-collapse-down-24.png" />
+    <EmbeddedResource Include="Localisation\Media\arrow-collapse-down-36.png" />
+    <EmbeddedResource Include="Localisation\Media\arrow-collapse-down-48.png" />
+    <EmbeddedResource Include="Localisation\Media\arrow-collapse-up-24.png" />
+    <EmbeddedResource Include="Localisation\Media\arrow-collapse-up-36.png" />
+    <EmbeddedResource Include="Localisation\Media\arrow-collapse-up-48.png" />
+    <EmbeddedResource Include="Localisation\Media\sine-wave-24.png" />
+    <EmbeddedResource Include="Localisation\Media\sine-wave-36.png" />
+    <EmbeddedResource Include="Localisation\Media\sine-wave-48.png" />
+    <EmbeddedResource Include="Localisation\Media\waves-24.png" />
+    <EmbeddedResource Include="Localisation\Media\waves-36.png" />
+    <EmbeddedResource Include="Localisation\Media\waves-48.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="LiteDB" Version="5.0.21" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.10" />
+    <PackageReference Include="UnitsNet" Version="5.60.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Localisation\Resource.Designer.cs">
+      <DependentUpon>Resource.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localisation\Resource.en.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource.en.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Localisation\Resource.de.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource.de.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Localisation\Resource.de.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localisation\Resource.en.resx">
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resource.en.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localisation\Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddDryingHeightCaption" xml:space="preserve">
+    <value>Add Drying Height:</value>
+  </data>
+  <data name="AddFallToNextLowWaterCaption" xml:space="preserve">
+    <value>Add Tidal Fall Between Now and Next LW:</value>
+  </data>
+  <data name="AllTimesLocalCaption" xml:space="preserve">
+    <value>All Times shown in Local</value>
+  </data>
+  <data name="AllTimesUtcCaption" xml:space="preserve">
+    <value>All Times shown in UTC</value>
+  </data>
+  <data name="ApplicationTitle" xml:space="preserve">
+    <value>Tide Predictor</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="arrow_collapse_down_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\arrow-collapse-down-24.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="arrow_collapse_down_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\arrow-collapse-down-36.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="arrow_collapse_down_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\arrow-collapse-down-48.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="arrow_collapse_up_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\arrow-collapse-up-24.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="arrow_collapse_up_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\arrow-collapse-up-36.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="arrow_collapse_up_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\arrow-collapse-up-48.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BusyContentCaption" xml:space="preserve">
+    <value>Loading Data</value>
+  </data>
+  <data name="CalculationsCaption" xml:space="preserve">
+    <value>Calculations</value>
+  </data>
+  <data name="ChartYAxisTitle" xml:space="preserve">
+    <value>Tide Height (Metres)</value>
+  </data>
+  <data name="ChooseEndDateCaption" xml:space="preserve">
+    <value>Choose End Date</value>
+  </data>
+  <data name="ChooseStartDateCaption" xml:space="preserve">
+    <value>Choose Start Date</value>
+  </data>
+  <data name="ClearChartedObjectHeaderCaption" xml:space="preserve">
+    <value>Clear Charted Object</value>
+  </data>
+  <data name="ColumnHeaderIsFavorite" xml:space="preserve">
+    <value>Favorite</value>
+  </data>
+  <data name="ColumnHeaderTideHeight" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="ColumnHeaderTideRange" xml:space="preserve">
+    <value>Range</value>
+  </data>
+  <data name="ColumnHeaderTideState" xml:space="preserve">
+    <value>Tide State</value>
+  </data>
+  <data name="ColumnHeaderTideStation" xml:space="preserve">
+    <value>Tide Station</value>
+  </data>
+  <data name="ColumnHeaderTideTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="FavoriteTideStationsTitle" xml:space="preserve">
+    <value>Favorite Tide Stations</value>
+  </data>
+  <data name="FromCaption" xml:space="preserve">
+    <value>From:</value>
+  </data>
+  <data name="GetTideHeightsCaption" xml:space="preserve">
+    <value>Get Tide Heights</value>
+  </data>
+  <data name="HeightCaption" xml:space="preserve">
+    <value>Height:</value>
+  </data>
+  <data name="HeightOfTideRequiredCaption" xml:space="preserve">
+    <value>Height of Tide Required:</value>
+  </data>
+  <data name="help_box_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\help-box-24.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="help_box_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\help-box-36.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="help_box_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\help-box-48.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HighWater" xml:space="preserve">
+    <value>High Water</value>
+  </data>
+  <data name="IntervalCaption" xml:space="preserve">
+    <value>Interval:</value>
+  </data>
+  <data name="LandingPageCaption" xml:space="preserve">
+    <value>Select a Tide Station</value>
+  </data>
+  <data name="LoadingTideHeightsMessage" xml:space="preserve">
+    <value>Loading Tide Heights Data...</value>
+  </data>
+  <data name="LocalCaption" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="LowWater" xml:space="preserve">
+    <value>Low Water</value>
+  </data>
+  <data name="ManageFavoriteTideStationsTitle" xml:space="preserve">
+    <value>Manage Favorite Tide Stations</value>
+  </data>
+  <data name="Metres" xml:space="preserve">
+    <value>Metres</value>
+  </data>
+  <data name="minus_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\minus-24.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="minus_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\minus-36.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="minus_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\minus-48.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MinutesCaptions" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="MobileApplicationTitle" xml:space="preserve">
+    <value>Tide Planning</value>
+  </data>
+  <data name="NavigationButtonCaptionBack" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="NextLowWaterHeightCaption" xml:space="preserve">
+    <value>Next Low Water Height:</value>
+  </data>
+  <data name="NextLowWaterTimeCaption" xml:space="preserve">
+    <value>Next Low Water Time:</value>
+  </data>
+  <data name="PickFromListCaption" xml:space="preserve">
+    <value>Pick from List</value>
+  </data>
+  <data name="PickFromMapCaption" xml:space="preserve">
+    <value>Pick From Map</value>
+  </data>
+  <data name="plus_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\plus-24.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="plus_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\plus-36.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="plus_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\plus-48.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RefreshTimeHeightTooltip" xml:space="preserve">
+    <value>Ctrl-R to Refresh Tide Heights</value>
+  </data>
+  <data name="SafeAnchorDepthCaption" xml:space="preserve">
+    <value>Safe Anchor Depth:</value>
+  </data>
+  <data name="SafeAnchoringDepthHeaderCaption" xml:space="preserve">
+    <value>Safe Anchoring Depth</value>
+  </data>
+  <data name="SelectedTideHeightCaption" xml:space="preserve">
+    <value>Current Selected Tide Height</value>
+  </data>
+  <data name="SelectedTideStationCaption" xml:space="preserve">
+    <value>Selected Tide Station</value>
+  </data>
+  <data name="ShowOnTideCurveCaption" xml:space="preserve">
+    <value>Show on Tide Curve:</value>
+  </data>
+  <data name="ShowTideCurveCaption" xml:space="preserve">
+    <value>Show Tide Curve</value>
+  </data>
+  <data name="ShowTimeInUtcCaption" xml:space="preserve">
+    <value>Show Date Time in UTC:</value>
+  </data>
+  <data name="sine_wave_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\sine-wave-24.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="sine_wave_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\sine-wave-36.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="sine_wave_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\sine-wave-48.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SnackbarMessageLoadingComplete" xml:space="preserve">
+    <value>Finished Loading Tide Stations</value>
+  </data>
+  <data name="SnackbarMessageLoadingTideStations" xml:space="preserve">
+    <value>Loading Tide Stations</value>
+  </data>
+  <data name="SubtractChartedDepthCaption" xml:space="preserve">
+    <value>Subtract Charted Depth:</value>
+  </data>
+  <data name="TideHeight" xml:space="preserve">
+    <value>Selected Tide Height</value>
+  </data>
+  <data name="TideHeightsIntervalCaption" xml:space="preserve">
+    <value>Interval between Tide Heights:</value>
+  </data>
+  <data name="TideHeightsIntervalTooltip" xml:space="preserve">
+    <value>The number of minutes required as an interval between the tidal heights. Valid range is 1 – 120 inclusive</value>
+  </data>
+  <data name="TideHeightsTitle" xml:space="preserve">
+    <value>Tide Heights</value>
+  </data>
+  <data name="TideStationsCaption" xml:space="preserve">
+    <value>Tide Stations</value>
+  </data>
+  <data name="TidesTitle" xml:space="preserve">
+    <value>Tides</value>
+  </data>
+  <data name="TideTimeCaption" xml:space="preserve">
+    <value>Selected Tide Time</value>
+  </data>
+  <data name="TimeCaption" xml:space="preserve">
+    <value>Time:</value>
+  </data>
+  <data name="ToCaption" xml:space="preserve">
+    <value>To:</value>
+  </data>
+  <data name="TodaysTidesCaption" xml:space="preserve">
+    <value>Todays Tides</value>
+  </data>
+  <data name="TooltipFindMyLocation" xml:space="preserve">
+    <value>Find my location</value>
+  </data>
+  <data name="TooltipVesselDraught" xml:space="preserve">
+    <value>Vessels draught including safety factor</value>
+  </data>
+  <data name="TooltipVesselSafetyFactor" xml:space="preserve">
+    <value>Vessels safety factor</value>
+  </data>
+  <data name="TotalDraughtNeededCaption" xml:space="preserve">
+    <value>Total Draught Needed:</value>
+  </data>
+  <data name="UtcCaption" xml:space="preserve">
+    <value>UTC</value>
+  </data>
+  <data name="VesselDetailsCaption" xml:space="preserve">
+    <value>Vessel Details</value>
+  </data>
+  <data name="VesselDraughtCaption" xml:space="preserve">
+    <value>Vessel Draught:</value>
+  </data>
+  <data name="VesselSafetyFactorCaption" xml:space="preserve">
+    <value>Vessel Safety Factor:</value>
+  </data>
+  <data name="ViewTideStationsMapCaption" xml:space="preserve">
+    <value>View Tide Stations on Map</value>
+  </data>
+  <data name="waves_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\waves-24.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="waves_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\waves-36.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="waves_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\waves-48.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="EmptyTideHeightsData" xml:space="preserve">
+    <value>No Tide Height Data Found</value>
+  </data>
+  <data name="SaveFileCaption" xml:space="preserve">
+    <value>Save CSV File</value>
+  </data>
+  <data name="SaveFileFilter" xml:space="preserve">
+    <value>Csv files (*.csv)|*.csv|All files (*.*)|*.*</value>
+  </data>
+  <data name="CsvExportCompleteMessage" xml:space="preserve">
+    <value>Completed CSV Export to {0}</value>
+  </data>
+  <data name="ExportToCsvCaption" xml:space="preserve">
+    <value>Export to CSV</value>
+  </data>
+  <data name="TideTimeAxisTitle" xml:space="preserve">
+    <value>Tide Time</value>
+  </data>
+  <data name="SelectTideStationLeft" xml:space="preserve">
+    <value>Select Tide Station 1:</value>
+  </data>
+  <data name="SelectTideStationRight" xml:space="preserve">
+    <value>Select Tide Station 2:</value>
+  </data>
+  <data name="CompareTideData" xml:space="preserve">
+    <value>Compare Tide Data</value>
+  </data>
+</root>
