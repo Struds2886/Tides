@@ -1,5 +1,6 @@
 ﻿namespace Struds.Net.TidePredictor.Domain
 {
+    //TODO: This class should be replaced by a Settings object coming from appsettings.config
     public class ServiceMetaDataPremium : IServiceMetaData
     {
         // 2807c070d53b4465b1c1ff7478f66f4c

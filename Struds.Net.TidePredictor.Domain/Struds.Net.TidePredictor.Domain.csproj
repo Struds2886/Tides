@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Media\arrow-collapse-down-24.png" />
     <EmbeddedResource Include="Localisation\Media\arrow-collapse-down-36.png" />
     <EmbeddedResource Include="Localisation\Media\arrow-collapse-down-48.png" />
     <EmbeddedResource Include="Localisation\Media\arrow-collapse-up-24.png" />
