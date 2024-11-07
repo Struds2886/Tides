@@ -6,7 +6,7 @@
 
     public class TideCalculator : ITideCalculator
     {
-        private static readonly NLog.ILogger logger = NLog.LogManager.GetCurrentClassLogger();
+        private static readonly NLog.ILogger Logger = NLog.LogManager.GetCurrentClassLogger();
 
         public double CalculateRequiredHeightOfTideOverDryingObject(double vesselDraught, double clearanceRequired, double chartedDepth, double dryingHeight)
         {
@@ -14,7 +14,7 @@
 
             var requiredHeightOfTide = (vesselDraughtAndClearance - chartedDepth) + dryingHeight;
 
-            logger.Debug($"{nameof(this.CalculateRequiredHeightOfTideOverDryingObject)}: ({vesselDraughtAndClearance:F2} - {chartedDepth:F2}) + {dryingHeight:F2} = {requiredHeightOfTide:F2} Metres");
+            Logger.Debug($"{nameof(this.CalculateRequiredHeightOfTideOverDryingObject)}: ({vesselDraughtAndClearance:F2} - {chartedDepth:F2}) + {dryingHeight:F2} = {requiredHeightOfTide:F2} Metres");
 
             return requiredHeightOfTide;
         }
@@ -33,7 +33,7 @@
 
             var safeAnchorDepth = vesselDraughtAndClearance + fallToLowWater;
 
-            logger.Debug($"{nameof(this.CalculateSafeAnchorDepth)}: ({vesselDraughtAndClearance:F2}) + ({fallToLowWater:F2}) = {safeAnchorDepth:F2} Metres");
+            Logger.Debug($"{nameof(this.CalculateSafeAnchorDepth)}: ({vesselDraughtAndClearance:F2}) + ({fallToLowWater:F2}) = {safeAnchorDepth:F2} Metres");
 
             return safeAnchorDepth;
         }

@@ -22,7 +22,7 @@
         private const string StationIdKey = "Id";
         private const string StationNameKey = "Name";
 
-        private static readonly NLog.ILogger logger = NLog.LogManager.GetCurrentClassLogger();
+        private static readonly NLog.ILogger Logger = NLog.LogManager.GetCurrentClassLogger();
 
         private readonly HttpMessageHandler httpMessageHandler;
         private readonly IServiceMetaData serviceMetaData;
@@ -41,14 +41,11 @@
                 {
                     try
                     {
-                        if (station.TimeZone == null)
-                        {
-                            station.TimeZone = this.GetTimeZoneFor(station.Latitude, station.Longitude);
-                        }
+                        station.TimeZone ??= this.GetTimeZoneFor(station.Latitude, station.Longitude);
 
-                        var tideDataResponse = await this.GetTidalEventData(station.StationIdentifier, start, end);
+                        var tideDataResponse = await this.GetTidalEventData(station.StationIdentifier);
 
-                        var tideDataContent = await tideDataResponse.Content.ReadAsStringAsync();
+                        var tideDataContent = await tideDataResponse.Content.ReadAsStringAsync(token);
 
                         JsonConvert.DeserializeObject<TideEvent[]>(tideDataContent)
                             .ToObservable()
@@ -65,7 +62,7 @@
 
                                     observer.OnNext(tideEvent);
                                 }, onError:
-                                ex => logger.Error(ex), 
+                                ex => Logger.Error(ex), 
                                 observer.OnCompleted);
                     }
                     catch (Exception e)
@@ -88,7 +85,7 @@
                         var tideHeightResponseMessage =
                             await this.GetTideHeights(station.StationIdentifier, startDateTime, endDateTime, interval);
 
-                        var tideHeightContent = await tideHeightResponseMessage.Content.ReadAsStringAsync();
+                        var tideHeightContent = await tideHeightResponseMessage.Content.ReadAsStringAsync(token);
 
                         JsonConvert.DeserializeObject<TideHeight[]>(tideHeightContent)
                             .ToObservable()
@@ -125,7 +122,7 @@
                     try
                     {
                         var stationDataResponse = await this.GetStations();
-                        var stationDataContent = await stationDataResponse.Content.ReadAsStringAsync();
+                        var stationDataContent = await stationDataResponse.Content.ReadAsStringAsync(token);
 
                         var featureCollection = JsonConvert.DeserializeObject<FeatureCollection>(stationDataContent);
 
@@ -230,7 +227,7 @@
             }
             catch (Exception e)
             {
-                logger.Error(e);
+                Logger.Error(e);
             }
 
             return null;
@@ -284,7 +281,7 @@
             return subject;
         }
 
-        private async Task<HttpResponseMessage> GetTidalEventData(string stationId, DateTime start, DateTime end)
+        private async Task<HttpResponseMessage> GetTidalEventData(string stationId)
         {
             var client = new HttpClient(this.httpMessageHandler);
 
@@ -292,8 +289,6 @@
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", this.serviceMetaData.UKHOApiKey);
 
             // Request parameters
-            var startDate = start.ToString(DateTimeFormatString);
-            var endDate = end.ToString(DateTimeFormatString);
             var uri =
                 $"{this.serviceMetaData.UKHOBaseUrl}Stations/{stationId}/TidalEvents";
 
@@ -310,7 +305,7 @@
             }
             catch (Exception e)
             {
-                logger.Error(e);
+                Logger.Error(e);
             }
 
             return tzInfo;
@@ -338,10 +333,7 @@
 
             try
             {
-                if (station.TimeZone == null)
-                {
-                    station.TimeZone = this.GetTimeZoneFor(station.Latitude, station.Longitude);
-                }
+                station.TimeZone ??= this.GetTimeZoneFor(station.Latitude, station.Longitude);
 
                 var client = new HttpClient();
                 var queryString = HttpUtility.ParseQueryString(string.Empty);
@@ -372,7 +364,7 @@
             }
             catch (Exception e)
             {
-                logger.Error(e);
+                Logger.Error(e);
             }
 
             return tideEvent;

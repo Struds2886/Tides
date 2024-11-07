@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Net;
     using System.Net.Http;
     using System.Threading.Tasks;
     using Domain;
@@ -13,7 +12,7 @@
 
     public class WorldTidesService
     {
-        private static readonly NLog.ILogger logger = NLog.LogManager.GetCurrentClassLogger();
+        private static readonly NLog.ILogger Logger = NLog.LogManager.GetCurrentClassLogger();
 
         private readonly HttpMessageHandler httpMessageHandler;
         private readonly IServiceMetaData serviceMetaData;
@@ -36,21 +35,11 @@
 
             var siteUri = new Uri("https://www.worldtides.info/tidestations");
 
-            var wr = WebRequest.Create(siteUri);
+            var wr = new HttpClient(this.httpMessageHandler);
 
-            using (var response = await wr.GetResponseAsync())
+            using (var response = await wr.GetAsync(siteUri))
             {
-                if (response == null)
-                {
-                    return stations;
-                }
-
-                var responseStream = response.GetResponseStream();
-
-                if (responseStream == null)
-                {
-                    return stations;
-                }
+                var responseStream = await response.Content.ReadAsStreamAsync();
 
                 using (var reader = new StreamReader(responseStream))
                 {
@@ -65,11 +54,11 @@
                             continue;
                         }
 
-                        var startpos = dataLine.IndexOf(latLongKey, StringComparison.CurrentCulture) + latLongKey.Length;
-                        var endPos = dataLine.LastIndexOf(endPositionLookupKey, StringComparison.CurrentCulture);
+                        var startPosition = dataLine.IndexOf(latLongKey, StringComparison.CurrentCulture) + latLongKey.Length;
+                        var endPosition = dataLine.LastIndexOf(endPositionLookupKey, StringComparison.CurrentCulture);
 
-                        var latlongString = dataLine.Substring(startpos, endPos - startpos);
-                        var nameString = dataLine.Substring(endPos + 2).Replace(endOfLineLookupKey, string.Empty);
+                        var latlongString = dataLine.Substring(startPosition, endPosition - startPosition);
+                        var nameString = dataLine.Substring(endPosition + 2).Replace(endOfLineLookupKey, string.Empty);
 
                         var latLongBits = latlongString.Split(new[] { comma }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -102,10 +91,7 @@
         {
             var data = await this.GetTideEventsNearMe(station.Latitude, station.Longitude, startDateTime, days);
 
-            if (station.TimeZone == null)
-            {
-                station.TimeZone = this.GetTimeZoneFor(station.Latitude, station.Longitude);
-            }
+            station.TimeZone ??= this.GetTimeZoneFor(station.Latitude, station.Longitude);
 
             var tideEvents = new List<TideEvent>();
 
@@ -146,10 +132,7 @@
 
         private async Task<IList<TideHeight>> GetTideHeightsForLocation(TideStation station, DateTime startDateTime, int days, int interval, bool utc = true)
         {
-            if (station.TimeZone == null)
-            {
-                station.TimeZone = this.GetTimeZoneFor(station.Latitude, station.Longitude);
-            }
+            station.TimeZone ??= this.GetTimeZoneFor(station.Latitude, station.Longitude);
 
             var data = await this.GetTideHeightsNearMe(station.Latitude, station.Longitude, startDateTime, days, interval);
 
@@ -173,7 +156,7 @@
                     }
                     catch (Exception e)
                     {
-                        logger.Error(e);
+                        Logger.Error(e);
                     }
                 }
             }
@@ -247,7 +230,7 @@
             }
             catch (Exception e)
             {
-                logger.Error(e);
+                Logger.Error(e);
             }
 
             return tzInfo;
