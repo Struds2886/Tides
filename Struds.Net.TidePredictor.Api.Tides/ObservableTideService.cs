@@ -10,8 +10,6 @@
     using System.Web;
 
     using Domain;
-    using Domain.Entities;
-
     using GeoJSON.Net.Feature;
 
     using GeoTimeZone;

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Struds.Net.TidePredictor.Domain.WorldTides
+﻿namespace Struds.Net.TidePredictor.Domain.WorldTides
 {
     using Newtonsoft.Json;
 

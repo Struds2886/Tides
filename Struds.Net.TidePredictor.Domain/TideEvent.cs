@@ -1,8 +1,6 @@
 ﻿namespace Struds.Net.TidePredictor.Domain
 {
     using System;
-
-    using Entities;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 

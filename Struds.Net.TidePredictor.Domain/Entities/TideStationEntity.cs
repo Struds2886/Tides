@@ -1,7 +1,5 @@
 ﻿namespace Struds.Net.TidePredictor.Domain.Entities
 {
-    using System.Collections.Generic;
-
     using LiteDB;
 
     public class TideStationEntity : IEntity

@@ -7,7 +7,6 @@
     using System.Net.Http;
     using System.Threading.Tasks;
     using Domain;
-    using Domain.Entities;
     using Domain.WorldTides;
     using GeoTimeZone;
     using Newtonsoft.Json;
