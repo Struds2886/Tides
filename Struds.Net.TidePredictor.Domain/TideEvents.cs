@@ -7,7 +7,7 @@ namespace Struds.Net.TidePredictor.Domain
 {
     using System;
     using System.Collections.Generic;
-    using Struds.Net.TidePredictor.Domain.Weather;
+    using Weather;
 
     public class TideEvents : List<TideEvent>
     {

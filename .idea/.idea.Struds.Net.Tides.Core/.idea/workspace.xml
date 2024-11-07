@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4176c3e-107e-42cb-8ecb-69948930ac76" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Struds.Net.Tides.Core/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Struds.Net.Tides.Core/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Struds.Net.TidePredictor.Api.Tides/TideService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Struds.Net.TidePredictor.Api.Tides/TideService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Struds.Net.TidePredictor.Domain/TideEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Struds.Net.TidePredictor.Domain/TideEvents.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +66,7 @@
       <updated>1730896062010</updated>
       <workItem from="1730896063166" duration="490000" />
       <workItem from="1730896597277" duration="38000" />
-      <workItem from="1730977385402" duration="566000" />
+      <workItem from="1730977385402" duration="786000" />
     </task>
     <task id="LOCAL-00001" summary="Added Rider files">
       <option name="closed" value="true" />

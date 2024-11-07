@@ -17,7 +17,7 @@
         private const string StationIdKey = "Id";
         private const string StationNameKey = "Name";
 
-        private static readonly NLog.ILogger logger = NLog.LogManager.GetCurrentClassLogger();
+        private static readonly NLog.ILogger Logger = NLog.LogManager.GetCurrentClassLogger();
 
         private readonly HttpMessageHandler httpMessageHandler;
         private readonly IServiceMetaData serviceMetaData;
@@ -59,7 +59,7 @@
             }
             catch (Exception e)
             {
-                logger.Error(e);
+                Logger.Error(e);
             }
 
             return stations;
@@ -115,7 +115,7 @@
             }
             catch (Exception e)
             {
-                logger.Error(e);
+                Logger.Error(e);
             }
 
             return null;
@@ -157,7 +157,7 @@
                 }
                 catch (Exception e)
                 {
-                    logger.Error(e);
+                    Logger.Error(e);
                 }
             }
 
@@ -170,15 +170,12 @@
 
             try
             {
-                if (station.TimeZone == null)
-                {
-                    station.TimeZone = this.GetTimeZoneFor(station.Latitude, station.Longitude);
-                }
+                station.TimeZone ??= this.GetTimeZoneFor(station.Latitude, station.Longitude);
 
                 var tideDataResponse = await this.GetTidalEventData(station.StationIdentifier, start, end);
 
                 var tideDataContent = await tideDataResponse.Content.ReadAsStringAsync();
-                tideEvents.AddRange(Newtonsoft.Json.JsonConvert.DeserializeObject<TideEvent[]>(tideDataContent));
+                tideEvents.AddRange(JsonConvert.DeserializeObject<TideEvent[]>(tideDataContent));
 
                 foreach (var tideEvent in tideEvents)
                 {
@@ -192,7 +189,7 @@
             }
             catch (Exception e)
             {
-                logger.Error(e);
+                Logger.Error(e);
             }
             return tideEvents;
         }
@@ -203,10 +200,7 @@
 
             try
             {
-                if (station.TimeZone == null)
-                {
-                    station.TimeZone = this.GetTimeZoneFor(station.Latitude, station.Longitude);
-                }
+                station.TimeZone ??= this.GetTimeZoneFor(station.Latitude, station.Longitude);
 
                 var tideHeightResponseMessage =
                     await this.GetTideHeights(station.StationIdentifier, startDateTime, endDateTime, interval);
@@ -223,7 +217,7 @@
             }
             catch (Exception e)
             {
-                logger.Error(e);
+                Logger.Error(e);
             }
 
             return tideHeights;
@@ -235,10 +229,7 @@
 
             try
             {
-                if (station.TimeZone == null)
-                {
-                    station.TimeZone = this.GetTimeZoneFor(station.Latitude, station.Longitude);
-                }
+                station.TimeZone ??= this.GetTimeZoneFor(station.Latitude, station.Longitude);
 
                 var client = new HttpClient();
                 var queryString = HttpUtility.ParseQueryString(string.Empty);
@@ -253,7 +244,7 @@
 
                 var tideHeightContent = await response.Content.ReadAsStringAsync();
 
-                var tideHeight = Newtonsoft.Json.JsonConvert.DeserializeObject<TideHeight>(tideHeightContent);
+                var tideHeight = JsonConvert.DeserializeObject<TideHeight>(tideHeightContent);
 
                 var tideTime = DateTime.SpecifyKind(dateTime, DateTimeKind.Utc);
                 var tideDate = DateTime.SpecifyKind(dateTime.Date, DateTimeKind.Utc);
@@ -269,7 +260,7 @@
             }
             catch (Exception e)
             {
-                logger.Error(e);
+                Logger.Error(e);
             }
 
             return tideEvent;
@@ -315,7 +306,7 @@
                 }
                 catch (Exception e)
                 {
-                    logger.Error(e);
+                    Logger.Error(e);
                 }
             }
 
@@ -332,7 +323,7 @@
             }
             catch (Exception e)
             {
-                logger.Error(e);
+                Logger.Error(e);
             }
 
             return tzInfo;
